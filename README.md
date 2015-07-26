@@ -21,7 +21,7 @@ class View_Test extends Kotache
 }
 ```
 
-And create a mustache renderer. The parameter to the engine method is the template name to use.
+And create a mustache renderer. there is no need to pass any paramters.
 
 ```php
 <?php
@@ -43,11 +43,11 @@ Templates should go in the `views/` directory in your cascading file system. The
 
 ## Partials
 
-Partials are loaded automatically likes as the rules of template. So if you reference `{{>foobar}}` in your template, it will look for that partial in `views/partials/foobar.mustache`.
+Partials are loaded automatically also like the rules of the templates. So if you reference `{{>foobar}}` in your template, it will look for that partial in `views/partials/foobar.mustache`.
 
 # Layouts
 
-Kotache supports layouts. To use, just add a `views/layout.mustache` file (a simple one is already provided), and through to setting the protected property _layout in the kotache, like as $this->_layout = 'admin', it will search for the admin.mustache file from the 'views/layouts/' folders automatically. You'll probably want to put a `$title` property in your view class. The layout should include a `{{>content}}` partial to render the body of the page.
+Kotache supports layouts. To use, just add a `views/layout.mustache` file (a simple one is already provided), and through to setting the protected property _layout in the kotache, like as $this->_layout = 'admin', it will search for the admin.mustache file from the 'views/layouts/' folder automatically. You'll probably want to put a `$title` property in your view class. The layout should include a `{{>content}}` partial to render the body of the page.
 
 # Additional Information
 
